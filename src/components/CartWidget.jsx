@@ -1,3 +1,10 @@
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Badge } from "@mui/material";
+
 export const CartWidget = () => {
-  return <div>CartWidget</div>;
+  return (
+    <Badge badgeContent={4} color="secondary">
+      <ShoppingCartIcon color="white" />
+    </Badge>
+  );
 };
