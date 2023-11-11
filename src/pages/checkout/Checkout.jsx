@@ -18,7 +18,6 @@ export const Checkout = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
 
   const handleChange = (e) => {
-    console.log([e.target.name], e.target.value);
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
 

@@ -42,8 +42,6 @@ export function ItemDetailContainer() {
     navigate("/cart");
   };
 
-  console.log(item);
-
   return !item.id ? (
     <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
       <div>
