@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
+import { numberFormat } from "../../../utils/utils";
 
 export const ProductCard = ({ product }) => {
   return (
@@ -25,13 +26,13 @@ export const ProductCard = ({ product }) => {
             {product.description}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {`$ ${product.price}`}
+            {numberFormat.format(product.price)}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Link to={`/item/${product.id}`}>
-          <Button size="small" color="primary">
+          <Button variant="outlined" size="small" color="primary">
             Ver mas
           </Button>
         </Link>
